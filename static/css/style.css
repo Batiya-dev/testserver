@@ -1,0 +1,48 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: bisque;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+table.column {
+  table-layout: fixed;
+  width: 35%;
+  border-collapse: collapse ;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  width: 25%;
+}
