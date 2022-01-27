@@ -57,4 +57,4 @@ def delete_from_db(db):
     return redirect('/products')
 
 
-run()
+run(host="kwork-robot-vk.herokuapp")
