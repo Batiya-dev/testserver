@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты</title>
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <table class="column">
+        <thead id="dimension1">
+            <th>Наименование</th>
+            <th>Количество</th>
+            <th>Цена</th>
+            <th>Удалить?</th>
+        </thead>
+        % for product in products:
+        <tbody id="dimension2">
+            <form action="/delete" method="post">
+                <td>{{product['name']}}</td>
+                <input type="hidden" name="id" value={{product['id']}}>
+                <td>{{product['nums']}}</td>
+                <td>{{product['price']}}</td>
+                <td><input type="submit" value="Удалить"></td>
+            </form>
+        </tbody>
+        % end
+    </table>
+
+    <form action="/send_data" method="post" class="send_data">
+        Наименование товара<br>
+        <input type="text" name="name" value="Товар1">
+        <br>
+        Количество<br>
+        <input type="text" name="nums" value="5">
+        <br>
+        Цена<br>
+        <input type="text" name="price" value="135">
+        <br><br>
+        <input type="submit" value="Подтвердить">
+    </form>
+
+
+</body>
+</html>
