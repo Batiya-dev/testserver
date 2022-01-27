@@ -57,4 +57,4 @@ def delete_from_db(db):
     return redirect('/products')
 
 
-run(host="kwork-robot-vk")
+run()
