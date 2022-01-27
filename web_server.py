@@ -2,7 +2,7 @@ from bottle_sqlite import SQLitePlugin
 from bottle import run, route, template, install, static_file, post, request, redirect, TEMPLATES
 
 
-install(SQLitePlugin(dbfile=r'C:\projects\teleg_b\example.db'))
+install(SQLitePlugin(dbfile=r'example.db'))
 
 
 @route('/')
@@ -29,7 +29,7 @@ def main(db):
 
 @route('/static/css/<filename>')
 def send_static(filename):
-    return static_file(filename, root=r'C:\projects\teleg_b\server\static\css')
+    return static_file(filename, root='static\css')
 
 
 @post('/send_data')
@@ -57,4 +57,4 @@ def delete_from_db(db):
     return redirect('/products')
 
 
-run(host="192.168.1.102", port="80", debug=True)
+run()
